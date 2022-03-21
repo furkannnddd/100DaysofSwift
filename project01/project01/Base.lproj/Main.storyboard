@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6wx-F0-cWL">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Zf2-Yi-wlP">
+            <objects>
+                <tableViewController id="h2t-cO-eVU" customClass="ViewController" customModule="project01" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="xFI-Jt-2bH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Picture" textLabel="IeF-gd-fSr" style="IBUITableViewCellStyleDefault" id="aII-IX-nfe">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aII-IX-nfe" id="gRe-Cv-mhr">
+                                    <rect key="frame" x="0.0" y="0.0" width="385.5" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IeF-gd-fSr">
+                                            <rect key="frame" x="20" y="0.0" width="357.5" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="h2t-cO-eVU" id="qti-cX-YIh"/>
+                            <outlet property="delegate" destination="h2t-cO-eVU" id="1Dl-mQ-Aoa"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="csd-36-WBX"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8re-VW-ftK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5442" y="74"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="qUo-Pw-CBL">
+            <objects>
+                <viewController storyboardIdentifier="Detail" id="dEJ-fM-0ZX" customClass="DetailViewController" customModule="project01" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R2i-Y5-xbh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gAg-cq-t5b">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FNy-21-DwB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gAg-cq-t5b" firstAttribute="centerX" secondItem="R2i-Y5-xbh" secondAttribute="centerX" id="9ea-4K-B1W"/>
+                            <constraint firstItem="gAg-cq-t5b" firstAttribute="top" secondItem="R2i-Y5-xbh" secondAttribute="topMargin" constant="-44" id="9wU-tf-2z8"/>
+                            <constraint firstItem="gAg-cq-t5b" firstAttribute="leading" secondItem="FNy-21-DwB" secondAttribute="leading" id="MH9-Kc-JDU"/>
+                            <constraint firstItem="gAg-cq-t5b" firstAttribute="centerY" secondItem="R2i-Y5-xbh" secondAttribute="centerY" id="nJo-mK-8UN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="C0b-6e-d7d"/>
+                    <connections>
+                        <outlet property="ImageView" destination="gAg-cq-t5b" id="SQ3-Da-4XW"/>
+                        <outlet property="imageView" destination="gAg-cq-t5b" id="bAF-6Q-dfB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VnG-24-OL2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6278" y="74"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iBs-B4-8Fq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6wx-F0-cWL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CgV-zd-0nq">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="h2t-cO-eVU" kind="relationship" relationship="rootViewController" id="xNV-aj-3f8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KCc-zV-UME" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4606" y="74"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
