@@ -1,4 +1,3 @@
 # 100DaysofSwift
 I started the 100DaysofSwift adventure at 05.03.2022
-![Simulator Screen Recording - iPhone 12 Pro - 2022-03-22 at 22 50 51]() 
-<img src="![Simulator Screen Recording - iPhone 12 Pro - 2022-03-22 at 22 50 51]()" width="128"/>
+![Simulator Screen Recording - iPhone 12 Pro - 2022-03-22 at 22 50 51]() = 120*120
