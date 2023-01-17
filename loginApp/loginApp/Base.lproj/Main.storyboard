@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yeU-Z8-h9E">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="loginApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kullanıcı Adı" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yqq-vC-QTB">
+                                <rect key="frame" x="20" y="233" width="353" height="45.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Şifre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xNj-E5-BSR">
+                                <rect key="frame" x="20" y="303.66666666666669" width="353" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LqE-bc-Ig4">
+                                <rect key="frame" x="145" y="422.66666666666669" width="103" height="51"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="GİRİŞ">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonGiris:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eAf-Fg-vOa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xNj-E5-BSR" secondAttribute="trailing" constant="20" id="30X-WO-bqs"/>
+                            <constraint firstItem="Yqq-vC-QTB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="130" id="9U2-od-fn0"/>
+                            <constraint firstItem="xNj-E5-BSR" firstAttribute="top" secondItem="Yqq-vC-QTB" secondAttribute="bottom" constant="25" id="KxX-cf-NXh"/>
+                            <constraint firstItem="LqE-bc-Ig4" firstAttribute="top" secondItem="xNj-E5-BSR" secondAttribute="bottom" constant="75" id="LAg-uW-AIM"/>
+                            <constraint firstItem="Yqq-vC-QTB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="XX3-f3-seJ"/>
+                            <constraint firstItem="LqE-bc-Ig4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="afN-QR-pwT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yqq-vC-QTB" secondAttribute="trailing" constant="20" id="jBm-Da-rOb"/>
+                            <constraint firstItem="xNj-E5-BSR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="mY4-bt-CBH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="FiU-ge-nAP"/>
+                    <connections>
+                        <outlet property="kullaniciAdiLabel" destination="Yqq-vC-QTB" id="V20-a6-bUG"/>
+                        <outlet property="sifreLabel" destination="xNj-E5-BSR" id="0Js-1w-SaS"/>
+                        <segue destination="ka8-fL-iv9" kind="show" identifier="loginTOhome" animates="NO" id="hqa-OM-vaT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="883.20610687022895" y="3.5211267605633805"/>
+        </scene>
+        <!--Anasayfa-->
+        <scene sceneID="BqB-Yj-ptW">
+            <objects>
+                <viewController id="ka8-fL-iv9" customClass="HomeViewController" customModule="loginApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zj0-WC-UuK">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i33-Dh-Y3x">
+                                <rect key="frame" x="161" y="408" width="71" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="I6q-2P-pJt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="i33-Dh-Y3x" firstAttribute="centerY" secondItem="zj0-WC-UuK" secondAttribute="centerY" id="8U1-sx-oRh"/>
+                            <constraint firstItem="i33-Dh-Y3x" firstAttribute="centerX" secondItem="zj0-WC-UuK" secondAttribute="centerX" id="QEl-9Z-Ex7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Anasayfa" id="Z30-tc-nuI">
+                        <barButtonItem key="rightBarButtonItem" title="Çıkış" id="xkF-JJ-mUa">
+                            <connections>
+                                <action selector="logOutButton:" destination="ka8-fL-iv9" id="QSN-EJ-wNw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="homeLabel" destination="i33-Dh-Y3x" id="hKp-T3-KJl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H3e-VY-KeR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1697" y="4"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1wT-Ka-zHb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yeU-Z8-h9E" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="n3U-re-drj">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="YLQ-J2-pTq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QTG-EI-v7U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-43.511450381679388" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
